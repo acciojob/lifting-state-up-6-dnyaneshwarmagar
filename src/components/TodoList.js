@@ -12,9 +12,7 @@ function TodoList({ todos, handleComplete }) {
             {/* Render todo text */}
             {todo.text}
             {/* Render "complete" button for items not yet completed */}
-            {todo.completed ?"" : (
-              <button onClick={() => handleComplete(todo.id)}>Complete</button>
-            )}
+            <button style={{display:todo.completed?"none":"inline-block"}} onClick={() => handleComplete(todo.id)}>Complete</button>
           </li>
         ))}
       </ul>

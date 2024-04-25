@@ -1,6 +1,7 @@
 import React from 'react';
 
 function TodoList({ todos, handleComplete }) {
+    console.log(todos);
   return (
     <div>
       <h2>Todo Items:</h2>
@@ -11,7 +12,7 @@ function TodoList({ todos, handleComplete }) {
             {/* Render todo text */}
             {todo.text}
             {/* Render "complete" button for items not yet completed */}
-            {!todo.completed && (
+            {todo.completed ?"" : (
               <button onClick={() => handleComplete(todo.id)}>Complete</button>
             )}
           </li>

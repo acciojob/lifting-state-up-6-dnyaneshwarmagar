@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 function TodoList({ todos, handleComplete }) {
     console.log(todos);
+    useEffect(()=>{},[todos])
   return (
     <div>
       <h2>Todo Items:</h2>
